@@ -16,10 +16,10 @@ select * from ecm_products;
 select * from ecm_order_detail;
 /
 
---add fk for product id in table order_id #bug
+--add fk for product id in table order_id
 ALTER TABLE ECM_ORDER_DETAIL ADD CONSTRAINT fk_product_id FOREIGN KEY (PRODUCT_ID) REFERENCES ecm_products (product_id);
 /
---MUST delete all data from table, we gan give constraint fk
+--Must delete all data from table, than we can modify and give constraint fk
 TRUNCATE TABLE ECM_ORDER_DETAIL;
 /
 
