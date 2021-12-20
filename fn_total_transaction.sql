@@ -5,7 +5,7 @@ IS
     total_transaction NUMBER;
 BEGIN
     SELECT
-        COUNT(DISTINCT order_id) AS total_orders_jan2020
+        COUNT(DISTINCT order_id) AS total_orders
     INTO total_transaction
     FROM
         ecm_orders
@@ -21,4 +21,8 @@ END;
 BEGIN
 DBMS_OUTPUT.PUT_LINE('Total Transkasi : ' || fn_total_transaction);
 END;
+/
+
+--execute function
+SELECT fn_total_transaction FROM DUAL;
 /
