@@ -73,7 +73,7 @@ END top_transactions;
 
 
 --query execute function in package
-select * from table (fn_top3_buyer);
+select * from table (top_transactions.fn_top3_buyer);
 / 
-select * from table (fn_top3_quantity_sameday);
+select * from table (top_transactions.fn_top3_quantity_sameday);
 /
