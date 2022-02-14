@@ -14,6 +14,7 @@ ORDER BY
     total_nilai_transaksi ASC;
 /
 
+--OPTION 2
 SELECT 
     to_char (to_date(created_at),'YYYYMMDD') as TANGGAL_TRS,
     count(to_char (to_date(created_at),'YYYYMMDD')) as JUMLAH_TRS,
